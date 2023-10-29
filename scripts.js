@@ -15,7 +15,7 @@ const playHuman = (humanChoice) => {
 }
 
 const playMachine = (machineChoice) => {
-    const choices = ['rock', 'paper', 'scissors']
+    const choices = ['👊', '🖐️', '✌️']
     const randomNumber = Math.floor(Math.random() * 3)
 
     return choices[randomNumber]
@@ -23,23 +23,27 @@ const playMachine = (machineChoice) => {
 }
 
 const playTheGame = (human, machine) => {
- 
-    console.log('Humano: ' + human + " Maquina:" + machine)
+    const machineChoiceElement = document.querySelector('#choiceMachine');
+    const choices = ['👊', '🖐️', '✌️'];
 
-    if (human === machine) {
-        result.innerHTML = 'DraW! (empate)'
+    const machineChoice = playMachine(); // Determine a escolha da máquina
+
+    // Atualize o elemento HTML com a escolha da máquina
+    machineChoiceElement.textContent = machineChoice;
+
+    if (human === machineChoice) {
+        result.innerHTML = 'DraW! (empate)';
     } else if (
-        (human === 'paper' && machine === 'rock') ||
-        (human === 'rock' && machine === 'scissors') ||
-        (human === 'scissors' && machine === 'paper')
+        (human === '🖐️' && machineChoice === '👊') ||
+        (human === '👊' && machineChoice === '✌️') ||
+        (human === '✌️' && machineChoice === '🖐️')
     ) {
-        humanScoreNumber++
-        humanScore.innerHTML = humanScoreNumber
-        result.innerHTML = 'You Win!'
+        humanScoreNumber++;
+        humanScore.innerHTML = humanScoreNumber;
+        result.innerHTML = 'You Win!';
     } else {
-        machineScoreNumber++
-        machineScore.innerHTML = machineScoreNumber
-        result.innerHTML = 'You lose!'
+        machineScoreNumber++;
+        machineScore.innerHTML = machineScoreNumber;
+        result.innerHTML = 'You lose!';
     }
-
-} 
+}

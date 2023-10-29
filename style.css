@@ -48,7 +48,7 @@ p {
 
 .container {
     padding: 20px;
-    background-color: #FED552;
+    background-color: #b6b9ae;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -56,6 +56,12 @@ p {
     justify-items: center;
 
 
+}
+
+h5 {
+    font-family: 'Tektur', sans-serif;
+    font-size: 35px;
+    color:#000000;
 }
 
 h5 span {
@@ -73,15 +79,15 @@ button {
     transition: opacity 0,6s ease-in-out;
 }
 
-#rock {
+#👊 {
     background-color: #ca4b4b;
 }
 
-#paper {
+#🖐️ {
     background-color: rgb(15, 161, 10);
 }
 
-#scissors {
+#✌️{
     background-color:#250cb4;
 
 }
